@@ -45,3 +45,7 @@ a {
   border-radius: 100px;
   background: #bbb;
 }
+
+.shadow-right {
+  box-shadow: 8px -2px 10px rgba(0, 0, 0, 0.2);
+}

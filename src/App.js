@@ -5,8 +5,6 @@ import { BrowserRouter, Routes, Route, useParams, useLocation } from 'react-rout
 import Layout from './components/Layout';
 
 function App() {
-  // const [showSidebar, setShowSidebar] = useState(true)
-
   return (
     <div className="App dashboard w-full min-h-screen h-fit">
       <BrowserRouter>
