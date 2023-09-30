@@ -49,10 +49,10 @@ function Dashboard() {
               <div key={ind} className='p-4 h-fit w-full sm:w-fit border-[#24bdae] border min-w-[100px] m-1 rounded my-2' style={{ flex: '1 0 auto' }}>
                 <h2 className='sm:text-lg text-gray-400 font-semibold text-center uppercase'>{val?.label}</h2>
                 <div className={`${val?.subset?.length > MAX_SM ? 'mx-auto flex flex-wrap gap-4 justify-center max-w-[350px]' : ''} ${val?.subset?.length > MAX_MD ? 'md:max-w-[450px]' : ''}  ${val?.subset?.length > MAX_LG ? 'md:max-w-[600px]' : ''} mt-4`}>
-                  {filteredData(val?.subset, 'year', year).map((subData, no) => (
+                  {val?.subset.map((subData, no) => (
                     <div key={no} className='my-2 text-gray-600 font-semibold text-sm w-fit text-center mx-auto'>
                       <img src={subData?.icon} className='max-w-[250px] sm:max-w-auto h-auto w-auto max-h-[80px] min-h-[50px]' alt='landscape' />
-                      <p className=''>{subData?.label}</p>
+                      <p className={`${year == subData?.year && 'bg-[#00ffaaa6]'} w-fit mx-auto`}>{subData?.label}</p>
                     </div>
                   ))}
                 </div>
@@ -61,7 +61,7 @@ function Dashboard() {
           }
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
